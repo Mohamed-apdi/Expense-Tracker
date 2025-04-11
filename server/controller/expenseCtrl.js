@@ -95,18 +95,18 @@ export const getTotalExpenseByCategory = asyncHandler(async (req, res) => {
 
 // get total expense by year
 export const getTotalExpenseByYear = asyncHandler(async (req, res) => {
-    const { id } = req.params;
+    const { id } = req.user;
 
     try {
         const totalExpenseByYear = await Expense.aggregate([
             { 
                 $match: { 
-                    userId: id // Convert to ObjectId explicitly
+                    userId: id,
                 } 
             },
             {
                 $group: {
-                    _id: { $year: '$createdAt' },
+                    _id: { $year: '$date' },
                     total: { $sum: '$amount' },
                 },
             },

@@ -10,18 +10,18 @@ import { DashboardAnalysisComponent } from "./dashboard-analysis/dashboard-analy
   template: `
    <div class="p-8">
       <div class="flex justify-between items-center">
-          <h1 class="text-3xl font-bold">Dashboard</h1>
-          <button pButton type="button" label="Add Expense" icon="pi pi-plus" class="!bg-white"></button>
+          <h1 class="text-3xl font-bold !text-white">Dashboard</h1>
+          <button pButton type="button" label="Add Expense" icon="pi pi-plus" class="!bg-black !text-white"></button>
       </div>
 
       <!-- Custom Tab Pills -->
-      <div class="flex gap-2 mb-4 bg-[#27272A] p-2 rounded-md w-[200px] mt-6">
+      <div class="flex gap-2 mb-4 bg-[#F4F4F5] p-2 rounded-md w-[200px] mt-6">
         <button
           (click)="activeTab = 'overview'"
           class="px-4 py-2 rounded-md font-medium text-sm transition duration-300 ease-in-out cursor-pointer"
           [ngClass]="{
-            'bg-[#09090B] text-white': activeTab === 'overview',
-            'bg-[#27272A] text-gray-400': activeTab !== 'overview'
+            'bg-[#fff] text-black': activeTab === 'overview',
+            'bg-[#F4F4F5] text-gray-400': activeTab !== 'overview'
           }"
         >
           Overview
@@ -30,8 +30,8 @@ import { DashboardAnalysisComponent } from "./dashboard-analysis/dashboard-analy
           (click)="activeTab = 'analysis'"
           class="px-4 py-2 rounded-md font-medium text-sm transition duration-300 ease-in-out cursor-pointer"
           [ngClass]="{
-            'bg-[#09090B] text-white': activeTab === 'analysis',
-            'bg-[#27272A] text-gray-400': activeTab !== 'analysis'
+            'bg-[#fff] text-black': activeTab === 'analysis',
+            'bg-[#F4F4F5] text-gray-400': activeTab !== 'analysis'
           }"
         >
           Analysis

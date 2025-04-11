@@ -33,5 +33,10 @@ export const routes: Routes = [
         path: "analysis",
         loadComponent: () => import('./pages/analyses/analyses.component').then((c) => c.AnalysesComponent),  // ✅ protected
         canActivate:[authGuard]
+    },
+    {
+        path:"expense/:id",
+        loadComponent:() => import("./pages/expense/expense-update/expense-update.component").then((c) => c.ExpenseUpdateComponent), // ✅ protected
+        canActivate:[authGuard]
     }
 ];

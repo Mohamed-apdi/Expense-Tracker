@@ -32,7 +32,7 @@ expenseRoute.delete('/:id', authMiddleware, deleteExpense);
 // get total expense by category
 expenseRoute.get('/total-by-category', authMiddleware, getTotalExpenseByCategory);
 // get total yearly expenses
-expenseRoute.get('/yearly/:id', authMiddleware, getTotalExpenseByYear);
+expenseRoute.get('/yearly', authMiddleware, getTotalExpenseByYear);
 // get total monthly expenses
 expenseRoute.get('/monthly', authMiddleware, getTotalExpenseByMonth);
 // get total weekly expenses

@@ -5,26 +5,32 @@ import { FormsModule } from '@angular/forms';
 import { FloatLabel } from 'primeng/floatlabel';
 import { ButtonModule } from 'primeng/button';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { HotToastModule, HotToastService } from '@ngneat/hot-toast';
 @Component({
   selector: 'app-login',
-  imports: [CardModule, InputTextModule, FormsModule, FloatLabel, ButtonModule, HttpClientModule, HotToastModule,],
+  imports: [CardModule, InputTextModule, FormsModule, FloatLabel, ButtonModule, HttpClientModule, HotToastModule,RouterLink],
   template: `
-    <div class="flex justify-center items-center h-screen bg-[#fff] text-black">
-      <p-card class="w-[400px] p-4 shadow-lg rounded-md">
-        <div class="flex flex-col items-center mb-4 gap-4">
-        <p-floatlabel variant="on">
-          <input pInputText id="email" autocomplete="off" [(ngModel)]="email" name="email" />
-          <label for="email">Email</label>
+    <div class="flex justify-center items-center h-screen text-black">
+      <p-card class="w-[400px] shadow-lg rounded-md" styleClass="!bg-[#f9fafb]">
+        <div class="flex flex-col items-center mb-4 gap-6 !w-full">
+        <p-floatlabel class='w-full'>
+          <input pInputText id="email" autocomplete="off" [(ngModel)]="email" name="email" class="!w-full !bg-[#f9fafb] !text-black"/>
+          <label for="email" class="!text-black">Email</label>
          </p-floatlabel>
 
-         <p-floatlabel variant="on">
-          <input pInputText id="password" type="password" autocomplete="off" [(ngModel)]="password" name="password" />
-          <label for="password">Password</label>
+         <p-floatlabel class='w-full'>
+          <input pInputText id="password" type="password" autocomplete="off" [(ngModel)]="password" name="password" class="w-full !bg-[#f9fafb] !text-black"/>
+          <label for="password" class="!text-black ">Password</label>
          </p-floatlabel>
 
-         <p-button label="Login" (onClick)="onLogin()" />
+         <button pButton type="submit"  class="!bg-blue-600 hover:!bg-blue-700 !text-white w-full font-semibold py-2 rounded transition-all duration-300" (click)="onLogin()">
+            Login
+          </button>
+         <div class="text-center">
+          <span class='text-black'>Don't have an account? </span>
+            <a routerLink="/register" class="text-blue-600 hover:underline curspor-pointer">Register</a>
+          </div>
         </div>
       </p-card>
     </div>

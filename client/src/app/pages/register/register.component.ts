@@ -7,10 +7,10 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { HotToastService } from '@ngneat/hot-toast';
 import { FloatLabel } from 'primeng/floatlabel';
-
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-register',
-  imports: [FormsModule, InputTextModule, ButtonModule, CardModule, HttpClientModule, FloatLabel],
+  imports: [FormsModule, InputTextModule, ButtonModule, CardModule, HttpClientModule, FloatLabel,RouterLink],
   template: `
     <div class="flex justify-center items-center min-h-screen  text-black">
       <p-card class="w-[400px] shadow-md rounded-md !bg-[#f9fafb]" styleClass="!bg-[#f9fafb]">
@@ -36,9 +36,9 @@ import { FloatLabel } from 'primeng/floatlabel';
             <label for="mobile" class="!text-black">Mobile</label>
           </p-floatlabel>
 
-          <button pButton type="submit" label="Register" class="!bg-blue-600 hover:!bg-blue-700 !text-white"></button>
+          <button pButton type="submit" label="Register" class="!bg-blue-600 hover:!bg-blue-700 !text-white" (click)="onRegister()"></button>
           <div class="text-center">
-            <span>Already have an account?? </span>
+            <span class='text-black'>Already have an account?? </span>
             <a routerLink="/login" class="text-blue-600 hover:underline">Login</a>
           </div>
         </form>

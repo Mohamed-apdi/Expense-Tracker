@@ -5,11 +5,11 @@ import { CardModule } from 'primeng/card';
   imports: [CardModule],
   template: `
     <div class="">
-      <div class="w-full flex justify-arrownd p-0 m-0 gap-4">
+      <div class="w-full flex justify-arrownd p-0 m-0 gap-4 !bg-white">
         
-      <p-card class="w-[25%]">
-       <div class="flex items-center justify-between mb-4">
-       <p class="m-0 font-bold">
+      <p-card class="w-[25%]" styleClass="!bg-white !text-black border border-gray-200">
+       <div class="flex items-center justify-between mb-4 !bg-white">
+       <p class="m-0 font-bold text-black">
           Total Balance
         </p>
         <i class="pi pi-wallet !text-[16px] text-gray-500"></i>
@@ -18,7 +18,7 @@ import { CardModule } from 'primeng/card';
         <p class="text-sm text-gray-500 mb-4">+20.1% from last month</p>
       </p-card>
 
-      <p-card class="w-[25%]">
+      <p-card class="w-[25%]"  styleClass="!bg-white !text-black border border-gray-200">
        <div class="flex items-center justify-between mb-4">
        <p class="m-0 font-bold">
         Monthly Expenses
@@ -29,7 +29,7 @@ import { CardModule } from 'primeng/card';
         <p class="text-sm text-gray-500 mb-4">+4.3% from last month</p>
       </p-card>
 
-      <p-card class="w-[25%]">
+      <p-card class="w-[25%]"  styleClass="!bg-white !text-black border border-gray-200">
        <div class="flex items-center justify-between mb-4">
        <p class="m-0 font-bold">
         Weekly Expenses
@@ -40,7 +40,7 @@ import { CardModule } from 'primeng/card';
         <p class="text-sm text-gray-500 mb-4">+10.1% from last week</p>
       </p-card>
 
-      <p-card class="w-[25%]">
+      <p-card class="w-[25%]"  styleClass="!bg-white !text-black border border-gray-200">
        <div class="flex items-center justify-between mb-4">
        <p class="m-0 font-bold">
         Daily Expenses
