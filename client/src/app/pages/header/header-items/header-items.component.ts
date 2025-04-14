@@ -40,10 +40,7 @@ import { CommonModule } from '@angular/common';
 })
 export class HeaderItemsComponent {
   navLinks = [
-    { label: 'Dashboard', path: '/', icon: 'pi pi-home' },
-    { label: 'Expense', path: '/expense', icon: 'pi pi-credit-card' },
-    { label: 'Analysis', path: '/analysis', icon: 'pi pi-chart-line' },
-    { label: 'History', path: '/history', icon: 'pi pi-history' },
+    { label: 'Expense', path: '/', icon: 'pi pi-credit-card' },
   ];
 
   user = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')!) : null;

@@ -128,7 +128,7 @@ export class ExpenseFormComponent {
           autoClose: true,
           duration: 2000,
         });
-        this.router.navigate(['/expense']);
+        this.router.navigate(['/']);
       },
       error: (err) => {
         this.toast.error(err.error.message || 'Failed to create expense.', {

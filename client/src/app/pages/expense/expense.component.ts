@@ -4,16 +4,14 @@ import { ButtonModule } from 'primeng/button';
 import { CommonModule } from '@angular/common';
 import { TabsModule } from 'primeng/tabs';
 import { ExpensesComponent } from "./expenses/expenses.component";
-import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-expense',
-  imports: [AllExpenseComponent, ButtonModule, CommonModule, TabsModule, ExpensesComponent, RouterLink],
+  imports: [AllExpenseComponent, ButtonModule, CommonModule, TabsModule, ExpensesComponent],
   template: `
    <div class="p-8">
       <div class="flex justify-between items-center">
           <h1 class="text-3xl font-bold !text-black">Expenses</h1>
-          <button pButton type="button" label="History" routerLink="/history" icon="pi pi-arrow-up-right" class="!bg-black !text-white"></button>
       </div>
 
       <!-- Custom Tab Pills -->
